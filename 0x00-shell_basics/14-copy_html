@@ -1,13 +1,2 @@
 #!/bin/bash
-
-# Copy all HTML files from the current directory to the parent directory, but only if they are newer or don't exist
-cp -u *.html ..
-
-# Print the files that were copied
-copied_files=$(ls -1 *.html 2>/dev/null)
-if [[ -n $copied_files ]]; then
-  echo "Copied files:"
-  echo "$copied_files"
-else
-  echo "No new or updated HTML files found."
-fi.
+cp -u *.html .. =$(ls -1 *.html 2>/dev/null)
