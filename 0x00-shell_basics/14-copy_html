@@ -1,2 +1,5 @@
 #!/bin/bash
-cp -u *.htm ..
+if [[ "$file" -nt "$filename" ]]; then
+  echo "Copying $filename to parent directory"
+  cp "$file" .
+fi
